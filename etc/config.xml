@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<modules>
+		<Delight_Piwik>
+			<version>0.2.2</version>
+		</Delight_Piwik>
+	</modules>
+
+	<global>
+		<models>
+			<piwik>
+				<class>Delight_Piwik_Model</class>
+			</piwik>
+		</models>
+
+		<blocks>
+			<piwik>
+				<class>Delight_Piwik_Block</class>
+			</piwik>
+			<page>
+				<rewrite>
+					<html_head>Delight_Piwik_Block_Page_Head</html_head>
+					<html_footer>Delight_Piwik_Block_Page_Footer</html_footer>
+				</rewrite>
+			</page>
+			<catalog>
+				<rewrite>
+					<category_view>Delight_Piwik_Block_Catalog_Category_View</category_view>
+					<product_view>Delight_Piwik_Block_Catalog_Product_View</product_view>
+				</rewrite>
+			</catalog>
+			<checkout>
+				<rewrite>
+					<cart>Delight_Piwik_Block_Checkout_Cart</cart>
+					<success>Delight_Piwik_Block_Checkout_Success</success>
+				</rewrite>
+			</checkout>
+		</blocks>
+
+		<helpers>
+			<piwik>
+				<class>Delight_Piwik_Helper</class>
+			</piwik>
+		</helpers>
+
+	</global>
+
+</config>
